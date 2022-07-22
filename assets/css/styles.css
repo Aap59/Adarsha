@@ -464,6 +464,10 @@ img {
   color: #fff;
   margin: 0 var(--mb-2);
 }
+.ttttt {
+  display: flex;
+  justify-content: center;
+}
 
 .footer__copy {
   font-size: var(--smaller-font-size);
