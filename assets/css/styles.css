@@ -468,7 +468,6 @@ img {
   display: flex;
   justify-content: center;
 }
-
 .footer__copy {
   font-size: var(--smaller-font-size);
 }
