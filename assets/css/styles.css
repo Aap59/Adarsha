@@ -48,7 +48,10 @@
     --smaller-font-size: 0.875rem;
   }
 }
-
+span.ttttt {
+    display: flex;
+    justify-content: center;
+}
 /*===== BASE =====*/
 *,
 ::before,
