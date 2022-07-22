@@ -48,10 +48,7 @@
     --smaller-font-size: 0.875rem;
   }
 }
-span.ttttt {
-    display: flex;
-    justify-content: center;
-}
+
 /*===== BASE =====*/
 *,
 ::before,
@@ -466,6 +463,10 @@ img {
   font-size: 1.5rem;
   color: #fff;
   margin: 0 var(--mb-2);
+}
+span.ttttt {
+    display: flex;
+    justify-content: center;
 }
 .ttttt {
   display: flex;
