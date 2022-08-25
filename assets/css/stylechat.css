@@ -72,7 +72,7 @@ body {
 .messages {
   flex-shrink: 1;
   border-radius: 25px;
-height: 144px;
+height: 259px;
   overflow: auto;
 }
 
