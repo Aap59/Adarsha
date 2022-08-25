@@ -440,6 +440,7 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
+  justify-content: center;
   background-color: var(--second-color);
   color: #fff;
   text-align: center;
@@ -463,15 +464,6 @@ img {
   font-size: 1.5rem;
   color: #fff;
   margin: 0 var(--mb-2);
-}
-span.ttttt {
-    display: flex;
-    justify-content: center;
-}
-span a {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
 }
 .ttttt {
   display: flex;

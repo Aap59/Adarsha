@@ -1,3 +1,23 @@
+FileValidation = (event) => {
+  var image = document.getElementById("output");
+  image.src = URL.createObjectURL(event.target.files[0]);
+  // const fi = document.getElementById("file");
+  // if (fi.files.length > 0) {
+  //     // for (const i = 0; i <= fi.files.length - 1; i++) {
+  //     //     const fsize = fi.files.item(i).size;
+  //     //     const file = Math.round((fsize / 1024));
+  //     // }
+  // }
+};
+
+var tag = document.createElement("p");
+var text = document.getElementById("output");
+tag.appendChild(text);
+var element = document.getElementById("new");
+element.appendChild(tag);
+
+//ihofoizesture
+
 const countEl = document.getElementById("count");
 countvisits();
 
@@ -5,9 +25,10 @@ function countvisits() {
   fetch("https://api.countapi.xyz/update/asdf/ghjk/?amount=1")
     .then((res) => res.json())
     .then((res) => {
-      countEl.innerHTML = res.value;
+      countEl.innerHTML = res.value + 1;
     });
 }
+
 /*===== MENU SHOW =====*/
 
 const showMenu = (toggleId, navId) => {
