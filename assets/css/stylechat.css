@@ -72,12 +72,13 @@ body {
 .messages {
   flex-shrink: 1;
   border-radius: 25px;
-
+height: 144px;
   overflow: auto;
 }
 
 .message {
   padding: 5px 0;
+  
   border-radius: 25px;
 }
 
