@@ -65,6 +65,7 @@ function getRandomName() {
 
   return name;
 }
+
 function getRandomColor() {
   return "#" + Math.floor(Math.random() * 0xffffff).toString(16);
 }
@@ -122,7 +123,27 @@ function addMessageToListDOM(text, member) {
   const el = DOM.messages;
   const wasTop = el.scrollTop === el.scrollHeight - el.clientHeight;
   el.appendChild(createMessageElement(text, member));
-  if (wasTop) {
+  if (!wasTop) {
     el.scrollTop = el.scrollHeight - el.clientHeight;
   }
 }
+
+// function scrollToBottom(don2) {
+//   var div = document.getElementById(don2);
+//   div.scrollBottom = div.clientHeight - div.scrollHeight;
+// }
+
+// window.setInterval(() => {
+//   const elem = document.getElementById("don2");
+//   elem.scrollTop = elem.scrollHeight;
+// }, 5);
+
+// const element = document.getElementById("don2");
+
+// function scrollToTop() {
+//   element.scrollIntoView(true);
+// }
+
+// function scrollToBottom() {
+//   element.scrollIntoView(false);
+// }
