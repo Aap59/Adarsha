@@ -81,6 +81,8 @@ body {
 .messages {
   flex-shrink: 1;
   border-radius: 25px;
+  scroll-behavior: smooth;
+
   height: 100px;
   padding-top: 58px;
   overflow: auto;
@@ -202,7 +204,8 @@ body {
   .messages {
     flex-shrink: 1;
     border-radius: 25px;
-    height: 542px;
+    scroll-behavior: smooth;
+    height: 530px;
     padding-top: -10px;
     overflow: auto;
   }
