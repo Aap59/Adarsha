@@ -49,7 +49,27 @@
 }
 
 body {
-  background-image: linear-gradient(to right, #8360c3, #2ebf91);
+  /* background-image: linear-gradient(to right, #8360c3, #2ebf91); */
+  /* background-image: #cc2b5e → #753a88;
+   */
+  /* background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  ); */
+  background-color: #753d8a;
+  background-image: linear-gradient(
+    180deg,
+    #753d8a 0%,
+    #6284ff 19%,
+    #ff0000 39%,
+    #6aa52a 60%,
+    #505b9e 80%,
+    #44a999 100%
+  );
+
   /* box-sizing: border-box; */
   margin: 0;
   /* padding: 13px; */
@@ -176,7 +196,26 @@ body {
   }
 
   body {
-    background-image: linear-gradient(to right, #8360c3, #2ebf91);
+    /* background-image: linear-gradient(to right, #8360c3, #2ebf91); */
+    /* background-image: #cc2b5e → #753a88; */
+    /* background-color: #4158d0;
+    background-image: linear-gradient(
+      43deg,
+      #4158d0 0%,
+      #c850c0 46%,
+      #ffcc70 100%
+    ); */
+    background-color: #753d8a;
+    background-image: linear-gradient(
+      180deg,
+      #753d8a 0%,
+      #6284ff 19%,
+      #ff0000 39%,
+      #6aa52a 60%,
+      #505b9e 80%,
+      #44a999 100%
+    );
+
     /* box-sizing: border-box; */
     margin: 0;
     width: 517px;
