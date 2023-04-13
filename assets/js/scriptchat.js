@@ -147,3 +147,80 @@ function addMessageToListDOM(text, member) {
 // function scrollToBottom() {
 //   element.scrollIntoView(false);
 // }
+
+// Add reply feature to messages
+function createMessageElement(text, member) {
+  const el = document.createElement("div");
+  el.className =
+    member.id === drone.clientId
+      ? "message message--mine"
+      : "message message--theirs";
+
+  // Add member name and color
+  const memberEl = createMemberElement(member);
+  memberEl.className += " message__member";
+  el.appendChild(memberEl);
+
+  // Add message text
+  const textEl = document.createElement("div");
+  textEl.className = "message__text";
+  textEl.innerText = text;
+  el.appendChild(textEl);
+
+  // Add reply button
+  const replyButton = document.createElement("button");
+  replyButton.innerText = "Reply";
+  replyButton.className = "message__reply";
+  replyButton.onclick = function () {
+    DOM.input.value = `@${member.clientData.name} `;
+    DOM.input.focus();
+  };
+  el.appendChild(replyButton);
+
+  return el;
+}
+// Add message alignment based on sender
+function createMessageElement(text, member) {
+  const el = document.createElement("div");
+  const isMine = member.id === drone.clientId;
+
+  // Add CSS classes based on message sender
+  el.classList.add("message");
+  el.classList.add(isMine ? "message--mine" : "message--theirs");
+  el.classList.add(isMine ? "message--right" : "message--left");
+
+  // Add member name and color
+  const memberEl = createMemberElement(member);
+  memberEl.className += " message__member";
+  el.appendChild(memberEl);
+
+  // Add message text
+  const textEl = document.createElement("div");
+  textEl.className = "message__text";
+  textEl.innerText = text;
+  el.appendChild(textEl);
+
+  // Add reply button
+  // const replyButton = document.createElement("button");
+  // replyButton.innerText = "Reply";
+  // replyButton.className = "message__reply";
+  // replyButton.onclick = function () {
+  //   DOM.input.value = `@${member.clientData.name} `;
+  //   DOM.input.focus();
+  // };
+  // el.appendChild(replyButton);
+
+  // return el;
+  const replyButton = document.createElement("button");
+  const replyIcon = document.createElement("i");
+  replyIcon.className = "fa-solid fa-reply";
+  replyButton.appendChild(replyIcon);
+  replyButton.appendChild(document.createTextNode(" Reply"));
+  replyButton.className = "message__reply";
+  replyButton.onclick = function () {
+    DOM.input.value = `@${member.clientData.name} `;
+    DOM.input.focus();
+  };
+  el.appendChild(replyButton);
+  return el;
+}
